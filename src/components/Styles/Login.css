@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+@media screen and (min-width:1024px) {
+    .login_main {
+        display: flex;
+        height: 90vh;
+        width: 100vw;
+    }
+    
+    .login_main > div {
+        flex: 1;
+    }
+      
+      .input-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: large;
+      }
+      
+      input[type="tel"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        padding-right: 10vw;
+        font-size: medium;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-family: Helvetica, sans-serif;
+      }
+      
+      button {
+        background-color: #091A44;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: large;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .forgot-password {
+        margin-top: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #888;
+        text-align: center;
+      }
+    
+      .forgot-password a {
+        color: #007bff;
+        text-decoration: none;
+      }
+    
+      .forgot-password a:hover {
+        text-decoration: underline;
+      }
+    
+      .login_head{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 35px;
+        font-family: 'Calibri' , sans-serif;
+      }
+      
+      .form{
+        margin-left: 15vw;
+      }
+    
+    .left {
+        margin-top: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .left::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(to top right, #091A44, #004D7F);
+        clip-path: ellipse(100% 50% at 0% 100%);
+    }
+    
+    
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .loginbg{
+        width: 80%;
+        height: 90%
+    }
+    
+    .S_logo{
+        display: flex;
+        justify-content: left;
+        margin-top: 10px;
+        margin-left: 10%;
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login_main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left {
+        margin-top: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .right {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        
+    }
+
+    .loginbg{
+        width: 100%;
+        height: 125%
+    }
+    
+    input[type="tel"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        padding-right: 10vw;
+        font-size: medium;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-family: Helvetica, sans-serif;
+        margin-bottom: 10px;
+      }
+      
+      button {
+        background-color: #091A44;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: large;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .forgot-password {
+        margin-top: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #888;
+        text-align: center;
+      }
+    
+      .forgot-password a {
+        color: #007bff;
+        text-decoration: none;
+      }
+    
+      .forgot-password a:hover {
+        text-decoration: underline;
+      }
+    
+      .S_logo{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        width: 120px;
+        height: 60px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .login_head{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 35px;
+        font-family: 'Calibri' , sans-serif;
+      }
+}
