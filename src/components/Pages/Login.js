@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import '../Styles/Login.css'
 import LoginImage from '../../assets/login_bg.png'
 import Logo1 from '../../assets/S_logo.png'
+import Logo from '../../assets/S_logo_1.png'
 
 function Login() {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -9,7 +10,7 @@ function Login() {
   return (
     <div className='login_container'>
         <div className='logo'>
-            <img className='S_logo' src={Logo1} alt="Logo" />
+            <img className='S_logo' src={Logo} alt="Logo" />
         </div>
 
         <div className='login_main'>
