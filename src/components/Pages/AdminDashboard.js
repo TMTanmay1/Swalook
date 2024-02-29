@@ -5,6 +5,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import DescriptionIcon from '@mui/icons-material/Description';
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
+import SearchIcon from '@mui/icons-material/Search';
 
 function AdminDashboard() {
 
@@ -28,7 +29,7 @@ function AdminDashboard() {
 
   return (
     <div className='Admin_dash_main'>
-      <Header />
+
       <div className='horizontal-container'>
         <div className='vertical-navigation'>
         <div className='ver_nav'>
@@ -52,10 +53,19 @@ function AdminDashboard() {
 
         </div>
         <div className='main-content'>
-          <div className="content-header">
-            <h1>Welcome Admin!</h1>
-            <input type="text" placeholder="Upcoming Appointments...." value={searchTerm} onChange={handleSearchChange} style={{ fontSize: '16px' }}/>
+        <div className="content-header">
+          <h1>Welcome Admin!</h1>
+          <div className="US_search-bar">
+            <input
+              type="text"
+              placeholder="Upcoming Appointments...."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+            <SearchIcon className="US_search-icon" />
           </div>
+        </div>
+
 
           <div className="content-body">
             <div className="content-box">
@@ -92,7 +102,17 @@ function AdminDashboard() {
           </div>
 
           <div className="content-footer">
-            <h3>Billing Table</h3>
+          <div className="f_top">
+              <h3>Billing Table</h3>
+              <div className="billing_search-bar">
+                <input
+                  type="text"
+                  placeholder="Search Billing..."
+                  className="search-Billing"
+                />
+                <SearchIcon className="billing_search-icon" />
+              </div>
+            </div>
             <div className='BT-con'>
 
             </div>

@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../../components/Styles/Header.css';
 import Logo from '../../assets/S_logo_1.png';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ServiceDetails from './ServiceDetails';
 
 function Header() {
  const [showDropdown, setShowDropdown] = useState(false);
@@ -33,11 +35,11 @@ const handleChooseImage = () => {
         <img src={Logo} alt="Logo" className="header_logo" />
       </div>
       <div className="navbar-center">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Service</button>
-        <button className="nav-button">About Us</button>
-        <button className="nav-button">Settings</button>
-        <button className="nav-button">24*7</button>
+      <button className="nav-button"><Link to="/" className="nav-link">Home</Link></button>
+        <button className="nav-button"><Link to="/admin/service" className="nav-link">Service</Link></button>
+        <button className="nav-button"><Link to="/about" className="nav-link">About Us</Link></button>
+        <button className="nav-button"><Link to="/settings" className="nav-link">Settings</Link></button>
+        <button className="nav-button"><Link to="/24*7" className="nav-link">24*7</Link></button>
       </div>
       <div className="navbar-right">
         <div className="user-photo" onClick={toggleDropdown}>

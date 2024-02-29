@@ -85,6 +85,15 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   }
 
+  .US_search-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  .US_search-icon {
+    margin-left: 10px;
+  }
+
   .content-body {
     padding: 10px;
     display: flex;
@@ -156,4 +165,28 @@
     padding: 20px; 
     height: 30vh;
   }
+
+  .search-Billing{
+    width: 20vw;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .f_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .billing_search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .billing_search-icon {
+    margin-left: 10px;
+  }
+  
   
