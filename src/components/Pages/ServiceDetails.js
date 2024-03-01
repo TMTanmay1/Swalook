@@ -2,20 +2,28 @@ import React , {useState} from 'react'
 import '../Styles/ServiceDetails.css'
 import Header from './Header'
 import AddServicePopup from './AddServicePopup';
+import DeleteServicePopup from './DeleteServicePopup';
 
 function ServiceDetails() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isAddPopupOpen, setIsAddPopupOpen] = useState(false);
+    const [isDeletePopupOpen, setIsDeletePopupOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
+  const AddtogglePopup = () => {
+    setIsAddPopupOpen(!isAddPopupOpen);
   };
+
+  const DeletetogglePopup = () => {
+    setIsDeletePopupOpen(!isDeletePopupOpen);
+  };
+
   return (
     <div className='admin_service_container'>
+        <Header />
         <div className="service_details_header">
         <h1>Service Details</h1>
         <div>
-        <button className="add_service_button" onClick={togglePopup}>Add Service</button>
-        <button className="delete_service_button" >Delete Service</button>
+        <button className="add_service_button" onClick={AddtogglePopup}>Add Service</button>
+        <button className="delete_service_button" onClick={DeletetogglePopup} >Delete Service</button>
         </div>
         </div>
         <div className="horizontal_line_container">
@@ -35,7 +43,8 @@ function ServiceDetails() {
           </tbody>
         </table>
       </div>
-      {isPopupOpen && <AddServicePopup onClose={togglePopup} />}
+      {isAddPopupOpen && <AddServicePopup onClose={AddtogglePopup} />}
+      {isDeletePopupOpen && <DeleteServicePopup onClose={DeletetogglePopup} />}
     </div>
   )
 }

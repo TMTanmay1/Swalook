@@ -29,7 +29,7 @@ function AdminDashboard() {
 
   return (
     <div className='Admin_dash_main'>
-
+      <Header />
       <div className='horizontal-container'>
         <div className='vertical-navigation'>
         <div className='ver_nav'>
