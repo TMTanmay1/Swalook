@@ -7,6 +7,8 @@ import Header from './components/Pages/Header';
 import AdminDashboard from './components/Pages/AdminDashboard';
 import Settings from './components/Pages/Settings';
 import PersonalInformation from './components/Pages/PersonalInformation';
+import Appointment from './components/Pages/Appointment';
+import GenerateInvoice from './components/Pages/GenerateInvoice';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/admin/service" element={<ServiceDetails />} />
           <Route path="/admin/settings" element={<Settings />} />
           <Route path="/admin/settings/personalInformation" element={<PersonalInformation />} />
+          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/generatebill" element={<GenerateInvoice />} />
         </Routes>
       </Router>
     </div>

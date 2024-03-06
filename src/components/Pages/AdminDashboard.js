@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Header from './Header.js';
 import '../../components/Styles/AdminDashboard.css';
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import ShowChartIcon from '@mui/icons-material/ShowChart';
-import DescriptionIcon from '@mui/icons-material/Description';
-import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import SearchIcon from '@mui/icons-material/Search';
+import VertNav from './VertNav.js';
 
 function AdminDashboard() {
 
@@ -33,22 +30,7 @@ function AdminDashboard() {
       <div className='horizontal-container'>
         <div className='vertical-navigation'>
         <div className='ver_nav'>
-          <div className="icon-container">
-            <BookOnlineIcon style={{ fontSize: 30, margin: '10px', color: 'white' }} />
-            <span className="icon-text">Appointment</span>
-          </div>
-          <div className="icon-container">
-            <DescriptionIcon style={{ fontSize: 30, margin: '10px', color: 'white' }} />
-            <span className="icon-text">Invoice</span>
-          </div>
-          <div className="icon-container">
-            <ShowChartIcon style={{ fontSize: 30, margin: '10px', color: 'white' }} />
-            <span className="icon-text">Analysis</span>
-          </div>
-          <div className="icon-container">
-            <StorefrontIcon style={{ fontSize: 30, margin: '10px', color: 'white' }} />
-            <span className="icon-text">Store</span>
-          </div>
+          <VertNav />
         </div>
 
         </div>
