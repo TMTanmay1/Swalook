@@ -1,11 +1,14 @@
 import React , {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import '../Styles/GenerateInvoice.css'
 import Multiselect from 'multiselect-react-dropdown';
 import Header from './Header'
 import VertNav from './VertNav'
 import invoiceImg from '../../assets/invoice.png'
+import {Link} from 'react-router-dom'
 
 function GenerateInvoice() {
+  const navigate = useNavigate();
     const [GBselectedServices, GBsetSelectedServices] = useState([]);
     const [GBservedBy, GBsetServedBy] = useState([]);
     const [isGST, setIsGST] = useState(false);
@@ -31,6 +34,10 @@ function GenerateInvoice() {
     const handleGSTChange = (event) => {
         setIsGST(true);
     }
+
+    const handleGenerateInvoice = () => {
+      navigate('/invoice'); 
+  };
   return (
     <div className='gb_dash_main'>
         <Header />
@@ -98,7 +105,7 @@ function GenerateInvoice() {
                             </div>
                         )}
                 <div className='gb_btn_contain'>
-                <button className='gb_button'>Generate Invoice</button>
+                <button className='gb_button' onClick={handleGenerateInvoice}>Generate Invoice</button>
                 </div>
             </div>
             <div className='gb_right'>

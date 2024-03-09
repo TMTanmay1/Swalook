@@ -9,6 +9,8 @@ import Settings from './components/Pages/Settings';
 import PersonalInformation from './components/Pages/PersonalInformation';
 import Appointment from './components/Pages/Appointment';
 import GenerateInvoice from './components/Pages/GenerateInvoice';
+import Invoice from './components/Pages/Invoice';
+import ForgetPassword from './components/Pages/ForgetPassword';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/admin/settings/personalInformation" element={<PersonalInformation />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/generatebill" element={<GenerateInvoice />} />
+          <Route path="/invoice" element={<Invoice />} />
+          <Route path="/forgetpassword" element={<ForgetPassword />} />
         </Routes>
       </Router>
     </div>

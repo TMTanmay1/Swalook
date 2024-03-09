@@ -1,7 +1,17 @@
 import React,{useState} from 'react'
 import '../Styles/DeleteServicePopup.css'
+import Multiselect from 'multiselect-react-dropdown';
 
 function DeleteServicePopup({onClose}) { 
+  const [deleteSelectedServices, setDeleteSelectedServices] = useState([]);
+  const serviceOptions = [
+    { key: 'service1', value: 'Service 1' },
+    { key: 'service2', value: 'Service 2' }
+  ];
+  const handleSelect = (selectedList) => {
+    setDeleteSelectedServices(selectedList);
+    console.log(deleteSelectedServices);
+  };
   return (
     <div className='DS_overlay'>
         <div className='DS_container'>
@@ -13,11 +23,16 @@ function DeleteServicePopup({onClose}) {
         </div>
         <hr></hr>
         <div className="DS_dropdown-container">
-          <select className="DS_select">
-            <option value="" >Select service to delete</option>       
-            <option value="service1">Service 1</option>
-            <option value="service2">Service 2</option>
-          </select> 
+          <Multiselect
+              options={serviceOptions}
+              showSearch={true}
+              onRemove={handleSelect }
+              onSelect={handleSelect}
+              displayValue="value"
+              placeholder="Select Services...."
+              className="DS_select"
+              showCheckbox={true}
+            />
         </div>
         <button className="delete_button">Delete</button>
         </div>

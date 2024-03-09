@@ -1,16 +1,24 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import '../Styles/Login.css'
 import LoginImage from '../../assets/login_bg.png'
 import Logo1 from '../../assets/S_logo.png'
 import Logo from '../../assets/S_logo_1.png'
 
 function Login() {
+    const navigate = useNavigate();
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
+
+    const handleResetPasswordClick = () => {
+      
+      navigate('/forgetpassword');
+  };
+
   return (
     <div className='login_container'>
         <div className='logo'>
-            <img className='S_logo' src={Logo} alt="Logo" />
+            <img className='S_logo' src={Logo1} alt="Logo" />
         </div>
 
         <div className='login_main'>
@@ -37,7 +45,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <p class="forgot-password">Forgot your password? <a href="#">Reset it</a></p>
+          <p class="forgot-password">Forgot your password? <a onClick={handleResetPasswordClick}>Reset it</a></p>
           <button type="submit">Login</button>
         </div>
         <div className='log_design'>
